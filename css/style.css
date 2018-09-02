@@ -9,24 +9,18 @@ body {
   margin: 50px;
 }
 
-header {
-  height: 100%;
-}
+
 ul{
   padding: 0;
 }
 nav {
   position: fixed;
 }
-
-li {
-  list-style: none;
-  font-family: "Open Sans", serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-  margin: 50px 0;
-  color: #ded8e9d9;
+.active {
+  background: #ff0000;
 }
+
+
 .dropdown-toggle::after {
     display: none;
 }
@@ -66,6 +60,15 @@ li {
     transition: .8s;
 
 }
+nav.mobile-only {
+  display: block;
+}
+nav.desktop-only {
+  display: none;
+}
+#mobile-menu {
+  background-color: #ff0000;
+}
 #mobile-menu.affix {
   background: #ff0000;
   transition: .8s;
@@ -84,7 +87,20 @@ li {
     margin: 20px 0;
     font-size: 2rem;
     color: #fbfbfb;
-        border-bottom: solid;
+}
+#me li {
+  list-style: none;
+  text-align: left;
+  float: none;
+  border: none;
+  font-family: "Open Sans", serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 50px 0;
+  color: #ded8e9d9;
+}
+#me img {
+  padding-right: 50px;
 }
 .burg {
   display: block;
@@ -104,6 +120,10 @@ float: left;
       margin: 460px 50px 50px 0;
       position: absolute;
       z-index: -2;
+
+  }
+  .contact #dd {
+    margin: 200px 50px 50px 0;
 
   }
 
@@ -129,8 +149,8 @@ float: left;
       z-index: -999
     }
     #profile {
-      width: 60%;
-      margin-left: -100px;
+      width: 70%;
+      margin-left: -20px;
       opacity: .7;
       transition: 3s;
       z-index: -999;
@@ -143,41 +163,134 @@ float: left;
     color: white;
     font-family: "open sans", serif;
     }
+    #present {
+      font-size: 1.5rem;
+      width: 100%;
+      float: right;
+    color: white;
+    font-family: "open sans", serif;
+    margin-top: 100px;
+    }
     #header {
           height: 600px;
     }
 .footer {
   float: right;
-  margin-top: 0px;
 
+}
+.contact-link {
+  margin-top: 500px;
+
+}
+body.contact{
+  background-image: url("wowm.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hear {
+  margin:130px 100px 50px 0;
+  font-size: 3rem;
+  position: absolute;
+z-index: -1
+}
+#header-hire {
+  height: 200px;
+
+}
+.footer-links img {
+  width: 40px;
+  padding-right: 10px!important;
+}
+.footer-links li {
+float: right;
+ display: block;
+ margin: 20px 0 0 0!important;
+}
+.footer-links {
+  width: 100px;
+float: right;
+}
+#me .footer-links {
+  width:300px;
+float: left;
 }
 }
 
 
   /* SMARTPHONES LANDSCAPE */
   @media only screen and (min-width: 480px) {
-    .footer {
-      float: right;
-      margin-top: 150px;
+    #hear {
+      margin:130px 100px 50px 0;
+      font-size: 4rem;
+      position: absolute;
 
     }
-    #hi {
-    font-size: 2rem;
+    #header-hire {
+      height: 200px;
+
+    }
+
+#hi {
+font-size: 2rem;
+margin: 100px 0;
 }
     .dropdown-menu {
-        margin-top: 84px;
+        margin-top: 70px;
     }
     #header {
           height: 900px;
     }
+    .footer-links img {
+      width: 40px;
+      padding-right: 10px!important;
+    }
+    .footer-links li {
+    float: right;
+     display: block;
+     margin: 20px 0 0 0!important;
+    }
+
   }
 
   /* TABLETS PORTRAIT */
   @media only screen and (min-width: 768px) {
-    .footer {
-        float: right;
-        margin-top: 250px;
+    li {
+      list-style: none;
+      text-align: left;
+      float: none;
+      border: none;
+      font-family: "Open Sans", serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin: 50px 0;
+      color: #ded8e9d9;
     }
+    nav.mobile-only {
+      display: none;
+    }
+    nav.desktop-only {
+      display: block;
+    }
+    .desktop-only li {
+      display: inline;
+      border: unset;
+      float: right;
+      margin: 40px 0 0 0;
+    }
+    body.contact{
+      background-image: url("wowc.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .contact-link {
+      margin-top: 400px;
+    }
+    #profile {
+        margin-top: -300px;
+        position: relative;
+        z-index: -999;
+          margin-left: -200px;
+      }
     #header {
           height: 1200px;
     }
@@ -191,7 +304,12 @@ float: left;
         font-size: 40px;
     }
 
+#hear {
+  margin:130px 100px 50px 0;
+  font-size: 4rem;
+  position: absolute;
 
+}
         #fd {
           width: 430px;
             position: absolute;
@@ -207,8 +325,22 @@ float: left;
           z-index: -999
         }
         #hi {
+          width: 70%;
           font-size: 2rem;
         font-family: "open sans", serif;
+        }
+        #present {
+          font-size: 2rem;
+        font-family: "open sans", serif;
+        }
+        #me img {
+          padding-right: 50px;
+        }
+        .footer-links {
+          width: 300px;
+        }
+        .footer-links img{
+          width: 80px;
         }
   }
 
@@ -227,13 +359,11 @@ float: left;
 font-size: 8rem;
 position: absolute;
 }
+#profile {
+    margin-top: -400px;
+    position: relative;
+    z-index: -999;
 
   }
 
-
-#profile.affix {
-  display: block;
-  position: relative;
-  opacity: .5;
-  transition: 3s;
 }
